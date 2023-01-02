@@ -1,0 +1,34 @@
+public class Main {
+    private static String x;
+
+    public static void main(String[] args) {
+        Furniture chair = new Furniture("White_chair", 4.00, "metal");
+        HouseholdItems chair2 = new Furniture("chair2", 6.00, "plastic");
+        HouseholdItems chair3 = new Furniture("chair3", 10.00, "wooden");
+
+        HouseholdItems fridge = new Appliance("fridge", 15.00, 'c');
+        HouseholdItems fridge2 = new Appliance("fridge2", 20.00, 'b');
+
+        HouseholdItems fridge3 = new Appliance("fridge3", 40.00, 'a');
+
+        Market bim =new Market();
+        bim.addHouseholdItem(chair);
+        bim.addHouseholdItem(chair2);
+        bim.addHouseholdItem(chair3);
+
+
+        System.out.println(bim.shoppingList.get(0));
+
+        bim.deleteHouseholdItem(chair);
+
+        System.out.println(bim.shoppingList);
+
+        User me=new User("Serra","12345", "balcova");
+        me.shoppingCart.add(chair3);
+        me.shoppingCart.add(chair);
+        System.out.println(me.shoppingCart.get(1).getPrice());
+
+        System.out.println(me.calculate());
+    }
+
+}
