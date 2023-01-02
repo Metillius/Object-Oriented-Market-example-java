@@ -1,0 +1,24 @@
+import java.util.ArrayList;
+
+public class User {
+    String name3;
+    String cardNumber;
+    String address;
+    ArrayList<HouseholdItems> shoppingCart= new ArrayList<HouseholdItems>();
+    public User(String name3, String cardNumber, String address) {
+        this.name3 = name3;
+        this.cardNumber = cardNumber;
+        this.address = address;
+    }
+    //  connect(Market market) {
+    //search(market);
+  //list
+   public double calculate() {
+       double totalprice = 0;
+       for (int i = 0; i <= shoppingCart.size()-1; i++) {
+           HouseholdItems item = shoppingCart.get(i);
+           totalprice += item.getPrice();
+       }
+       return totalprice;
+   }
+}
