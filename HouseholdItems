@@ -1,0 +1,43 @@
+public abstract class HouseholdItems {
+    private String name;
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+    private double price;
+    public double getPrice() {
+        return price;
+    }
+    public void setPrice(double price) {
+        this.price = price;
+    }
+}
+
+
+class Furniture extends HouseholdItems {
+    protected String material;
+
+
+    public Furniture(String name, double price, String material) {
+        
+        this.setName(name);
+        this.setPrice(price);
+        this.material = material;
+
+    }
+}
+    class Appliance extends HouseholdItems{
+        protected char energyRate;
+
+
+        public Appliance(String name, double price, char energyRate) {
+
+            setName(name);
+            this.setPrice(price);
+            this.energyRate = energyRate;
+
+        }
+
+    }
