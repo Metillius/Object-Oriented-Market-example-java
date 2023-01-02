@@ -1,0 +1,39 @@
+import java.util.ArrayList;
+
+public class Market {
+    protected String name2;
+    ArrayList<HouseholdItems> shoppingList= new ArrayList<HouseholdItems>();
+
+  /*  public HouseholdItems search(String name, char c){
+        if(c=='m')
+        for (int i=0; i<=shoppingList.size(); i++) {
+
+            if(){
+            System.out.println(HouseholdItems.getName());
+        }}
+    }*/
+
+    public void addHouseholdItem(HouseholdItems householdItems){
+        shoppingList.add(householdItems);
+    }
+
+    public void deleteHouseholdItem(HouseholdItems householdItems){
+        shoppingList.remove(householdItems);
+    }
+
+    public void list(char c){
+        if (c=='m'){
+            for (int i = 0; i <= shoppingList.size() - 1; i++) {
+               HouseholdItems name=shoppingList.get(i);
+                }
+
+            }
+        }
+
+     //   else if (c== 'e'){}
+     //   else return;
+
+    public static void toString(HouseholdItems householdItems) {
+        System.out.println(householdItems.getName()+ " is for the price of " +householdItems.getPrice() + " dollars.");
+    }
+}
